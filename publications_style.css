@@ -1,0 +1,332 @@
+
+:root {
+    --primary: #005288;
+    --secondary: #003366;
+    --dark: #1A1A2E;
+    --light: #F5F5F7;
+    --accent: #E31937;
+    --accent2: #1DA1F2;
+    --accent3: #4B0082;
+    --text: #333333;
+    --light-bg: #F8F9FA;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+ /* Navbar */
+ .navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 50vh;
+    background: linear-gradient(135deg, rgba(0, 82, 136, 0.9), rgba(0, 51, 102, 0.9)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 0;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 60px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+}
+
+.bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+/* Publication Cards */
+.publication-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border-left: 3px solid var(--primary);
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.publication-year {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+    background: rgba(0, 82, 136, 0.1);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.publication-title {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.publication-authors {
+    color: var(--secondary);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.publication-venue {
+    color: var(--text);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.publication-description {
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer {
+    background: var(--primary);
+    padding: 80px 0 30px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+
+.social-links a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+/* Additional Styles */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* @media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+} */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar-collapse {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+}
+
+.patent-badge {
+    background: linear-gradient(135deg, var(--accent), #ff6b6b);
+}
+.patent-item {
+    background: linear-gradient(to right, rgba(0, 82, 136, 0.05), rgba(255, 255, 255, 0));
+    border-left: 3px solid var(--accent);
+}
+
+.patent-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.patent-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.patent-links {
+    margin-top: 15px;
+}
+
+/* Enable hover dropdown behavior */
+.hover-dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  
