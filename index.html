@@ -776,6 +776,27 @@
             observer.observe(section);
         });
     </script>
+
+<script>
+  $(document).ready(function () {
+    // Toggle dropdown on click
+    $(".hover-dropdown > .dropdown-toggle").click(function (e) {
+      e.preventDefault(); // prevent default anchor behavior
+      e.stopPropagation(); // stop bubbling to document
+      var $menu = $(this).next(".dropdown-menu");
+      
+      // Close other open dropdowns
+      $(".dropdown-menu").not($menu).slideUp();
+      $menu.slideToggle(); // toggle clicked one
+    });
+
+    // Hide dropdowns when clicking outside
+    $(document).click(function () {
+      $(".dropdown-menu").slideUp();
+    });
+  });
+</script>
+
 </body>
 
 </html>
