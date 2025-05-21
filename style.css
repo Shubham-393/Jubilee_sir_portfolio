@@ -919,9 +919,10 @@ footer {
 }
 
 
-/* Enable hover dropdown */
+/* Enable hover dropdown 
 .hover-dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; /* removes small jump */
   }
-  
+
+ */
